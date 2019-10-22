@@ -7,7 +7,7 @@ from spydrnet.utility.utility import Utility
 import spydrnet.utility.utility as util
 import spydrnet.support_files as files
 
-class GraphBuilder:
+class VirtalInstnaceGraphBuilder:
 
     def __init__(self, ir=None):
         self.ir_graph = nx.DiGraph()
@@ -117,5 +117,5 @@ if __name__ == '__main__':
     parser = EdifParser.from_filename(files.edif_files['unique_challenge.edf'])
     parser.parse()
     ir = parser.netlist
-    graph_builder = GraphBuilder()
+    graph_builder = VirtalInstnaceGraphBuilder()
     graph_builder.build_graph(ir)
