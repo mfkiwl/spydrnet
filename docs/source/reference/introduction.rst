@@ -65,7 +65,7 @@ SpyDrNet currently includes a parser for EDIF::
 
 SpyDrNet currently includes a composer for EDIF::
 
-    >>> sdn.compose('<filename>.edf', netlist)
+    >>> sdn.compose(netlist, '<filename>.edf')
 
 **Loading SpyDrNet**
 

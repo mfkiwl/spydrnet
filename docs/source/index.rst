@@ -12,7 +12,8 @@
    :maxdepth: 1
 
    install
-   tutorial
+   tutorial_old
+   tutorial/index
    reference/index
    developer/index
    license
