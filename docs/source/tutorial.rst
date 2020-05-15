@@ -1,15 +1,67 @@
-Tutorial_old
+Tutorial
 ============
-This is the old tutorial
 
-SpyDrNet currently only supports the parsing and composing for EDIF
+Installation
+------------
+
+For installing instructions, please refer :ref:`INSTALL.rst`
+
+Working Environment
+-------------------
+
+SpyDrNet is coded in Python, and requires Python 3.5 or newer versions of Python. In order to import SpyDrNet to the project, use the following code:
+
+    >>> import spydrnet as sdn
+    >>>
+
+In this tutorial, we will use 'sdn' as a shorcut for SpyDrNet to manipulate all the commands.
+
+Parsing
+-------
+
+SpyDrNet currently only supports the parsing and composing for EDIF file
 
 To parse a file, enter the following command
 
+    >>> netlist = sdn.parse('<netlist_filename>.edf')
+
+
+Nelist is an intermediate representation (IR). We are able to modify the netlist and add new elements. The following code returns the name of the top isntance of the netlist:
+
+    >>> netlist.top_instance.name
+
+This creates a new library and the library is added to the nestlist. For the entire documentation of SpyDrNet, please refer :ref:`sec:api_spec`
+
+    >>> netlist.create_library()
+
+
+
+
+Composing
+---------
+
+To compose a file, enter the following command
+
     >>> sdn.compose(netlist, '<filename>.edf')
 
+A new file named '<filename>.edf' should be generated in the working directory.
 
-Below is a list of all the intermediate representations (IR) used by SpyDrNet.
+Examples
+--------
+
+For more of the functionality, features, and uses of SpyDrNet，please visit :ref:`sec:examples`
+
+Creating from scratch
+---------------------
+
+We can also create the hardware design from scratch
+
+    >>>nelist = sdn.Netlist('myNetlist')
+
+Below is a list of all the intermediate representations (IR) used by SpyDrNet. See :ref:`sec:api_spec` for API specification.
+
+Intermediate Representation
+----------------------------
 
 SpyDrNet's intermediate representation of netlists (IR) is what sets it apart for other EDA tools. The IR is structured to house netlists in a generic way while allowing for format specific constructs to be preserved.
 

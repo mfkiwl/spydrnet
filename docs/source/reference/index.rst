@@ -11,4 +11,5 @@ Reference
 
    introduction
    element_data
+   clone
    api_specification

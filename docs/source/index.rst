@@ -9,11 +9,10 @@
     :Date: |today|
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 0
 
    install
-   tutorial_old
-   tutorial/index
+   tutorial
    reference/index
    developer/index
    license
